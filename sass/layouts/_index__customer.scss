@@ -1,0 +1,34 @@
+@use '../utilities/variables' as *;
+
+.customer {
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__link {
+        width: 170px;
+        height: 92px;
+        background-color: $secondaryTitleColor;
+        color: $iconColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $iconColor;
+        border-radius: 4px;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: $accentColor;
+        border-color: $accentColor;
+    }
+
+    &__icon {
+        fill: currentcolor;
+    }
+}

@@ -1,0 +1,144 @@
+@use '../utilities/variables' as *;
+
+.footer {
+    background-color: $backgroundDarkColor;
+    height: 252px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+    }
+
+    &__logo {
+        margin-bottom: 6px;
+        display: block;
+        &--white {
+            color: $secondaryTitleColor;
+        }
+        &:hover,
+        &:focus {
+            color: $accentDarkColor;
+        }
+    }
+
+    &__address {
+        font-style: normal;
+        width: 240px;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: calc(24/14);
+        color: $secondaryTitleColor;
+        margin-bottom: 2px;
+
+        &:hover,
+        &:focus {
+            color: $accentColor;
+        }
+
+        &--opacity {
+            opacity: 0.6;
+        }
+    }
+
+    &__contact-item:not(:last-child) {
+        margin-bottom: 2px;
+    }
+}
+
+.fuo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: calc(16/14);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $secondaryTitleColor;
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $secondaryTitleColor;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        background-color: $accentColor;
+        color: $secondaryTitleColor;
+    }
+}
+
+.subscribe {
+    margin-left: auto;
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: calc(16/14);
+        text-transform: uppercase;
+        color: $secondaryTitleColor;
+    }
+
+    &__form {
+        margin-top: 20px;
+    }
+
+    &__label {
+        display: flex;
+    }
+
+    &__input {
+        width: 358px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        background-color: inherit;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(20/16);
+        padding-left: 16px;
+    }
+
+    &__button {
+        margin-left: 12px;
+        width: 200px;
+        height: 50px;
+        background: $accentColor;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        position: relative;
+        border-color: $accentColor;
+        cursor: pointer;
+        display: flex;
+        position: relative;
+        align-items: center;
+        border: none;
+    }
+
+    &__button>span {
+        margin-left: 48px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: calc(30/16);
+        letter-spacing: 0.06em;
+        color: $secondaryTitleColor;
+    }
+
+    &__icon {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 28px;
+    }
+}

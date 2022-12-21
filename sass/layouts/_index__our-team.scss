@@ -1,0 +1,61 @@
+@use '../utilities/variables' as *;
+
+.ot {
+background-color: $backgroundLightColor;
+
+    &__list {
+        background-color: $backgroundLightColor;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        background: $secondaryTitleColor;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+        display: flex;
+        flex-direction: column;
+        width: 270px;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__picture {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-size: 16px;
+        line-height: calc(19/16);
+        text-align: center;
+        color: $primaryTitleColor;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(19/16);
+        text-align: center;
+        color: $secondaryTextColor;
+        margin-bottom: 16px;
+    }
+
+    &__card-list {
+        margin-bottom: 30px;
+    }    
+
+    &__link {
+            background-color: $secondaryTitleColor;
+            color: $iconColor;
+
+    }
+
+    &__link:hover,
+    &__link:focus {
+            background-color: $accentColor;
+            color: $secondaryTitleColor;
+    }
+}    

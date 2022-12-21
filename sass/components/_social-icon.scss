@@ -1,0 +1,23 @@
+@use '../utilities/variables' as *;
+
+.socials {
+    display: flex;
+    justify-content: center;
+
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__link {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+}

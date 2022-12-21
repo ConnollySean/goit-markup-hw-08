@@ -1,0 +1,85 @@
+@use '../utilities/variables' as *;
+
+.header {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        margin-right: 97px; 
+        &--black {
+            color: $primaryTitleColor
+        }
+        &:hover,
+        &:focus {
+            color: $accentDarkColor
+        }
+    }
+}
+
+.nav {
+    display: flex;
+
+    &__item:not(:last-child) {
+        margin-right: 53px;
+    }
+
+    &__link {
+        font-family: 'Roboto';
+        font-size: 14px;
+        line-height: calc(16/14);
+        letter-spacing: 0.02em;
+        color: $primaryTextColor;
+        padding: 32px 0;
+        display: block;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: $accentColor;
+    }
+
+    &__link--current {
+        color: $accentColor;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 4px;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            background: $accentColor
+        }
+    }
+}
+
+.contact {
+    display: flex;
+    margin-left: auto;
+
+    &__container:not(:last-child) {
+        margin-right: 50px;
+    }
+
+    &__link {
+        font-style: normal;
+        font-size: 14px;
+        line-height: calc(16/14);
+        letter-spacing: 0.02em;
+        color: $secondaryTextColor;
+        padding: 32px 0;
+        display: flex;
+        align-items: center;
+
+        &:hover,
+        &:focus {
+            color: $accentColor
+        }
+    }
+
+    &__icon {
+        margin-right: 10px;
+        fill: currentcolor;
+    }
+}

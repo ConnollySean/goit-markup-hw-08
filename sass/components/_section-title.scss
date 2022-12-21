@@ -1,0 +1,10 @@
+@use '../utilities/variables' as *;
+
+.section__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42/36);
+    text-align: center;
+    color: $primaryTitleColor;
+    margin-bottom: 50px;
+}

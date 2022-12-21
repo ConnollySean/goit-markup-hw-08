@@ -1,0 +1,58 @@
+@use '../utilities/variables' as *;
+
+.hero {
+    background-color: $backgroundDarkColor;
+    padding: 200px 0;
+    background-image:
+        linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/mainpageimages/hero-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 44px;
+        line-height: calc(60/44);
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $secondaryTitleColor;
+        display: inline-block;
+        width: 696px;
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: calc(30/16);
+        text-align: center;
+        letter-spacing: 0.06em;
+        color: $secondaryTitleColor;
+        background-color: $accentColor;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        border-color: $accentColor;
+        padding: 10px 20px;
+        border: none;
+
+        &:hover,
+        &:focus {
+            color: $accentColor;
+            background-color: $accentDarkColor;
+        }
+    }
+}
