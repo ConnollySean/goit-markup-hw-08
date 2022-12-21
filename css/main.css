@@ -30,10 +30,20 @@ textarea {
 }
 
 .container {
-  width: 1200px;
+  width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section {
@@ -79,6 +89,9 @@ textarea {
   height: 100vh;
   position: absolute;
   z-index: 10;
+  background: #FFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .section__title {
@@ -112,15 +125,57 @@ textarea {
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+  }
 }
 .header__logo {
-  margin-right: 97px;
+  display: block;
 }
 .header__logo--black {
   color: #212121;
 }
-.header__logo:hover, .header__logo:focus {
-  color: #014379;
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 97px;
+  }
+}
+.header__link {
+  color: #212121;
+}
+.header__link:hover, .header__link:active {
+  color: #2196F3;
+}
+@media screen and (min-width: 768px) {
+  .header__link {
+    display: none;
+  }
+}
+.header__icon {
+  fill: currentColor;
+}
+
+.menuContainer {
+  width: 40px;
+  height: 40px;
+}
+@media screen and (min-width: 768px) {
+  .menuContainer {
+    display: none;
+  }
+}
+
+.headerNav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .headerNav {
+    display: flex;
+  }
 }
 
 .nav {
@@ -155,12 +210,26 @@ textarea {
   background: #2196F3;
 }
 
-.contact {
-  display: flex;
-  margin-left: auto;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact {
+    flex-direction: column;
+  }
 }
-.contact__container:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .contact {
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contact__container:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__container:not(:last-child) {
+    margin-right: 50px;
+    margin-left: auto;
+  }
 }
 .contact__link {
   font-style: normal;
@@ -168,7 +237,6 @@ textarea {
   line-height: 1.1428571429;
   letter-spacing: 0.02em;
   color: #757575;
-  padding: 32px 0;
   display: flex;
   align-items: center;
 }
@@ -178,6 +246,46 @@ textarea {
 .contact__icon {
   margin-right: 10px;
   fill: currentcolor;
+}
+
+.navModal__container {
+  position: fixed;
+  width: 480px;
+  position: absolute;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.navModal__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.navModal__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: #212121;
+  margin-left: 40px;
+}
+.navModal__link:hover, .navModal__link:focus {
+  color: #2196F3;
+}
+
+.exit {
+  color: #212121;
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+  margin-left: 425px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.exit:hover, .exit:focus {
+  color: #2196F3;
+}
+.exit__icon {
+  fill: currentColor;
 }
 
 .footer {
@@ -196,9 +304,6 @@ textarea {
 }
 .footer__logo--white {
   color: #FFF;
-}
-.footer__logo:hover, .footer__logo:focus {
-  color: #014379;
 }
 .footer__address {
   font-style: normal;
@@ -390,6 +495,8 @@ textarea {
 .heroModal__container {
   width: 528px;
   height: 581px;
+  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -559,15 +666,20 @@ textarea {
 }
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3636363636;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #FFF;
   display: inline-block;
-  width: 696px;
+  width: 198px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.3636363636;
+    width: 696px;
+  }
 }
 .hero__button {
   font-family: "Roboto";

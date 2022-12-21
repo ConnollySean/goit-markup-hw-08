@@ -3,17 +3,58 @@
 .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    height: 60px;
+
+    @media screen and (min-width: 768px) {
+        height: 80px;
+    }
 
     &__logo {
-        margin-right: 97px; 
+        display: block;
+
         &--black {
             color: $primaryTitleColor
         }
-        &:hover,
-        &:focus {
-            color: $accentDarkColor
+        
+        @media screen and (min-width: 1200px) {
+            margin-right: 97px;
         }
     }
+
+    &__link {
+        color: $primaryTitleColor;
+        &:hover,
+        &:active {
+            color: $accentColor;
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+}
+
+.menuContainer {
+    width: 40px;
+    height: 40px;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.headerNav {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex
+    }
+
 }
 
 .nav {
@@ -55,11 +96,24 @@
 }
 
 .contact {
-    display: flex;
-    margin-left: auto;
+    
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-direction: column;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: auto;
+    }
 
     &__container:not(:last-child) {
-        margin-right: 50px;
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            margin-bottom: 10px;
+        }
+        @media screen and (min-width: 1200px) {
+            margin-right: 50px;
+            margin-left: auto;
+        }        
     }
 
     &__link {
@@ -67,11 +121,9 @@
         font-size: 14px;
         line-height: calc(16/14);
         letter-spacing: 0.02em;
-        color: $secondaryTextColor;
-        padding: 32px 0;
+        color: $secondaryTextColor;        
         display: flex;
         align-items: center;
-
         &:hover,
         &:focus {
             color: $accentColor

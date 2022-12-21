@@ -17,10 +17,6 @@
         &--white {
             color: $secondaryTitleColor;
         }
-        &:hover,
-        &:focus {
-            color: $accentDarkColor;
-        }
     }
 
     &__address {

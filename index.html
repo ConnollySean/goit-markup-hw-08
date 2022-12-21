@@ -32,14 +32,14 @@
     <header>
         <div class="container header">
             <a href="./index.html" class="logo header__logo"><span class="logo--blue">Web</span><span class="header__logo--black">Studio</span></a>            
-            <div class="container">
+            <div class="menuContainer">
                 <a href="" class="header__link" data-menu-open>
-                    <svg width="40" height="40">
+                    <svg width="40" height="40" class="header__icon">
                     <use href="./images/svgimages/sprite.svg#icon-menu"></use>
                 </svg>
                 </a>                
             </div>
-            <nav class="is-hidden">
+            <nav class="headerNav">
                 <ul class="nav">
                     <li class="nav__item">
                         <a href="./index.html" class="nav__link nav__link--current">Studio</a>
@@ -52,7 +52,7 @@
                     </li>
                 </ul>       
             </nav>    
-            <ul class="contact is-hidden">
+            <ul class="contact headerNav">
                 <li class="contact__container">
                     <a href="mailto:info@devstudio.com" class="contact__link">
                         <svg class="contact__icon" width="16" height="12">
@@ -76,13 +76,50 @@
 
         <!-- Nav Menu Modal -->
 
-        <div class="modal is-hidden navModal" data-menu>
+        <div class="modal  navModal" data-menu>
             <div class="modal__container navModal__container">
                 <a href="" class="exit" data-menu-close>
                     <svg class="exit__icon" width="40" height="40">
-                    <use href="./images/svgimages/sprite.svg#icon-close-x"></use>
+                    <use href="./images/svgimages/sprite.svg#icon-close_40px"></use>
                 </svg>
-                </a>                
+                </a> 
+                <ul class="navModal__nav">
+                    <li class="navModal__item">
+                        <a href="./index.html" class="navModal__link">Studio</a>
+                    </li>
+                    <li class="navModal__item">
+                        <a href="./portfolio.html" class="navModal__link">Portfolio</a>
+                    </li>
+                    <li class="navModal__item">
+                        <a href="#" class="navModal__link">Contacts</a>
+                    </li>
+                </ul>  
+                <ul class="navModal__contacts">
+                    <li class="contacts">
+                        <a href="tel:+12127724150" class="contact__link">
+                            +1 212-772-4150
+                        </a>
+                    </li>
+                    <li class="contacts">
+                        <a href="mailto:info@devstudio.com" class="contact__link">
+                            info@devstudio.com
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navModal__social">
+                    <li class="socialLinks">
+                        <a href="" class="socialLinks_link">Instagram</a>
+                    </li>
+                    <li class="socialLinks">
+                        <a href="" class="socialLinks_link">Twitter</a>
+                    </li>
+                    <li class="socialLinks">
+                        <a href="" class="socialLinks_link">Facebook</a>
+                    </li>
+                    <li class="socialLinks">
+                        <a href="" class="socialLinks_link">LinkedIn</a>
+                    </li>
+                </ul>             
             </div>
         </div>
         
@@ -439,7 +476,7 @@
     <footer class="footer">    
         <div class="container footer__container">
             <div>
-                <a href="./index.html" class="logo footer__logo"><span class="logo__blue">Web</span><span class="logo__flex">Studio</span></a>
+                <a href="./index.html" class="logo footer__logo"><span class="logo--blue">Web</span><span class="footer__logo--white">Studio</span></a>
                 <address class="footer__address">
                     <a href="https://goo.gl/maps/pZUgdTMqykUNrWZ28" target="_blank" class="footer__link">
                         695 Park Ave, New York, NY 10065, United States
