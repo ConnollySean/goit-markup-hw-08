@@ -1,7 +1,12 @@
 @use '../utilities/variables' as *;
 
 .wwd {
+    display: none;
     padding-top: 0px;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
 
     &__list {
         display: flex;

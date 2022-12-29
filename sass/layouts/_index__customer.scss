@@ -3,15 +3,47 @@
 .customer {
     &__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
-    &__item:not(:last-child) {
-        margin-right: 30px;
+    &__item {
+
+        &:nth-child(odd) {
+            @media screen and (max-width: 767px) {
+                margin-right: 30px;
+            }
+        }
+        &:nth-child(1),
+        &:nth-child(3) {
+            @media screen and (max-width: 767px) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &:nth-child(3n+1),
+        &:nth-child(3n+2) {
+            @media screen and (min-width:768px) and (max-width:1199px) {
+                margin-right: 30px;
+            }
+        }
+
+        &:nth-child(1),
+        &:nth-child(3) {
+            @media screen and (min-width:768px) and (max-width:1199px) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &:not(:last-child) {
+            @media screen and (min-width: 1200px) {
+                margin-right: 30px;
+            }
+        }        
     }
 
     &__link {
-        width: 170px;
+        width: 210px;
         height: 92px;
         background-color: $secondaryTitleColor;
         color: $iconColor;
@@ -20,6 +52,12 @@
         justify-content: center;
         border: 1px solid $iconColor;
         border-radius: 4px;
+        @media screen and (min-width: 768px) {
+            width: 226px;
+        }
+        @media screen and (min-width:1200px) {
+            width: 170px;
+        }
     }
 
     &__link:hover,

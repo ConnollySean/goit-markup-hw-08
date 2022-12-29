@@ -10,27 +10,11 @@
     <title>Studio</title>
 </head>
 <body>
-    
-    
-    <!-- 
         
-@media screen and (min-width: 768px) {
-
-}
-
-@media screen and (min-width: 1200px) {
-    
-}
-
--->
-    
-    
-    
-    
     <!-- Top Nav Bar -->
 
-    <header>
-        <div class="container header">
+    <header class="header">
+        <div class="container header__container">
             <a href="./index.html" class="logo header__logo"><span class="logo--blue">Web</span><span class="header__logo--black">Studio</span></a>            
             <div class="menuContainer">
                 <button class="header__link js-open-menu" type="button">
@@ -76,12 +60,13 @@
 
         <!-- Nav Menu Modal -->
 
-        <div class="navModal js-menu-container">                        
+        <div class="navModal modal js-menu-container">                        
+            <div class="navModal__container">
                 <button class="exit js-close-menu">
                     <svg class="exit__icon" width="40" height="40">
                         <use href="./images/svgimages/sprite.svg#icon-close_40px"></use>
                     </svg>
-                </button>                
+                </button>
                 <ul class="navModal__nav">
                     <li class="navModal__item">
                         <a href="./index.html" class="navModal__link">Studio</a>
@@ -92,33 +77,34 @@
                     <li class="navModal__item">
                         <a href="#" class="navModal__link">Contacts</a>
                     </li>
-                </ul>  
+                </ul>
                 <ul class="navContacts">
                     <li class="navContacts__item">
-                        <a href="tel:+12127724150" class="navContacts__link modalPhone">
+                        <a href="tel:+12127724150" class="navContacts__link navContacts__link--phone">
                             +1 212-772-4150
                         </a>
                     </li>
                     <li class="navContacts__item">
-                        <a href="mailto:info@devstudio.com" class="navContacts__link modalEmail">
+                        <a href="mailto:info@devstudio.com" class="navContacts__link navContacts__link--email">
                             info@devstudio.com
                         </a>
                     </li>
                 </ul>
-                <ul class="navModal__social">
-                    <li class="socialLinks">
-                        <a href="" class="socialLinks_link">Instagram</a>
+                <ul class="socialLinks__list">
+                    <li class="socialLinks__item">
+                        <a href="" class="socialLinks__link">Instagram</a>
                     </li>
-                    <li class="socialLinks">
-                        <a href="" class="socialLinks_link">Twitter</a>
+                    <li class="socialLinks__item">
+                        <a href="" class="socialLinks__link">Twitter</a>
                     </li>
-                    <li class="socialLinks">
-                        <a href="" class="socialLinks_link">Facebook</a>
+                    <li class="socialLinks__item">
+                        <a href="" class="socialLinks__link">Facebook</a>
                     </li>
-                    <li class="socialLinks">
-                        <a href="" class="socialLinks_link">LinkedIn</a>
+                    <li class="socialLinks__item">
+                        <a href="" class="socialLinks__link">LinkedIn</a>
                     </li>
-                </ul>           
+                </ul>
+            </div>                   
         </div>
         
         <!-- Hero Section -->
@@ -134,11 +120,11 @@
         
         <div class="modal is-hidden heroModal" data-modal>
             <div class="modal__container heroModal__container">
-                <a href="" class="close" data-modal-close>
+                <button type="button" class="close" data-modal-close>
                     <svg class="close__icon" width="11" height="11">
                         <use href="./images/svgimages/sprite.svg#icon-close-x"></use>
                     </svg>
-                </a>
+                </button>
                 <div class="form">
                     <h2 class="form__title">Leave your information and we'll call you back</h2>
                     <form action="/" class="form__container" name="Request Our Service Form" autocomplete="on">
@@ -204,7 +190,7 @@
                                 <use href="./images/svgimages/sprite.svg#icon-antenna"></use>
                             </svg>
                         </div>
-                        <h3 class="features__title">ATTENTION TO DETAILS</h3>
+                        <h3 class="features__cardTitle">ATTENTION TO DETAILS</h3>
                         <p class="features__text">We go into all the details and processess of your business to develop a customized solution.</p>
                     </li>   
                     <li class="features__item">
@@ -213,7 +199,7 @@
                                 <use href="./images/svgimages/sprite.svg#icon-clock"></use>
                             </svg>
                         </div>
-                        <h3 class="features__title">PUNCTUALITY</h3>
+                        <h3 class="features__cardTitle">PUNCTUALITY</h3>
                         <p class="features__text">With us, you can feel safe and secure. An important principle of the company: respect your time and respect the agreed deadlines.</p>
                     </li>
                     <li class="features__item">
@@ -222,7 +208,7 @@
                                 <use href="./images/svgimages/sprite.svg#icon-diagram"></use>
                             </svg>
                         </div>
-                        <h3 class="features__title">PLANNING</h3>
+                        <h3 class="features__cardTitle">PLANNING</h3>
                         <p class="features__text">You will be able to observe and participate in every phase of solution development and implementation.</p>
                     </li>
                     <li class="features__item">
@@ -231,7 +217,7 @@
                                 <use href="./images/svgimages/sprite.svg#icon-astronaut"
                             </svg>
                         </div>
-                        <h3 class="features__title">MODERN TECHNOLOGIES</h3>
+                        <h3 class="features__cardTitle">MODERN TECHNOLOGIES</h3>
                         <p class="features__text">We use innovative tools to solve assigned taskes. It's time to simplify work processes.</p>
                     </li>
                 </ul>
@@ -244,20 +230,25 @@
             <div class="container">
                 <h2 class="section__title">What we do</h2>
                 <ul class="wwd__list">
-                    <li class="wwd__item">
-                        <img src="./images/mainpageimages/box1.jpg" alt="Optimize for computer" width="370">
+                    <li class="wwd__item">                        
+                        <img
+                        srcset="./images/mainpageimages/box1-desk.png 1x, ./images/mainpageimages/box1-desk@2x.png 2x"
+                        src="./images/mainpageimages/box1-desk.png"
+                        alt="Optimize for computer" width="370">
                         <div class="wwd__overlay">
                             <p>desktop apps</p>
                         </div>
                     </li>
                     <li class="wwd__item">
-                        <img src="./images/mainpageimages/box2.jpg" alt="Optimize for phone" width="370">
+                        <img srcset="./images/mainpageimages/box2-desk.png 1x, ./images/mainpageimages/box2-desk@2x.png 2x"
+                            src="./images/mainpageimages/box2-desk.png" alt="Optimize for mobile" width="370">
                         <div class="wwd__overlay">
                             <p>mobile apps</p>
                         </div>
                     </li>
                     <li class="wwd__item">
-                        <img src="./images/mainpageimages/box3.jpg" alt="Optimize for tablet" width="370">
+                        <img srcset="./images/mainpageimages/box3-desk.png 1x, ./images/mainpageimages/box3-desk@2x.png 2x"
+                            src="./images/mainpageimages/box3-desk.png" alt="Optimize for tablet" width="370">
                         <div class="wwd__overlay">
                             <p>design solutions</p>
                         </div>
@@ -273,10 +264,24 @@
                 <h2 class="section__title">Our Team</h2>
                 <ul class="ot__list">
                     <li class="ot__item">
-                        <img class="ot__picture" src="./images/mainpageimages/teamcard1.jpg" alt="Smiling guy with glasses" width="270">
+
+                        <img class="ot__picture ot__picture--mobile"
+                            srcset="./images/mainpageimages/teamcard1-mobile.png 1x, ./images/mainpageimages/teamcard1-mobile@2x.png 2x"
+                            src="./images/mainpageimages/teamcard1-mobile.png" alt="Smiling guy with glasses" width="450">
+
+                        <img class="ot__picture ot__picture--tablet"
+                            srcset="./images/mainpageimages/teamcard1-tablet.png 1x, ./images/mainpageimages/teamcard1-tablet@2x.png 2x"
+                            src="./images/mainpageimages/teamcard1-tablet.png" alt="Smiling guy with glasses" width="354">
+
+                        <img class="ot__picture ot__picture--desk" 
+                        srcset="./images/mainpageimages/teamcard1-desk.png 1x, ./images/mainpageimages/teamcard1-desk@2x.png 2x"
+                        src="./images/mainpageimages/teamcard1-desk.png" 
+                        alt="Smiling guy with glasses" 
+                        width="270">
+
                         <h3 class="ot__title">Christopher Walker</h3>
                         <p class="ot__text">Product Designer</p>
-                        <ul class="socials ot__card-list">
+                        <ul class="socials ot__cardList">
                             <li class="socials__item">
                                 <a href="" class="socials__link ot__link">
                                     <svg class="socials__icon" width="20" height="20">
@@ -308,10 +313,22 @@
                         </ul>
                     </li>
                     <li class="ot__item">
-                        <img class="ot__picture" src="./images/mainpageimages/teamcard2.jpg" alt="Smiling woman with glasses" width="270">
+
+                        <img class="ot__picture ot__picture--mobile"
+                            srcset="./images/mainpageimages/teamcard2-mobile.png 1x, ./images/mainpageimages/teamcard2-mobile@2x.png 2x"
+                            src="./images/mainpageimages/teamcard2-mobile.png" alt="Smiling woman with glasses" width="450">
+
+                        <img class="ot__picture ot__picture--tablet"
+                            srcset="./images/mainpageimages/teamcard2-tablet.png 1x, ./images/mainpageimages/teamcard2-tablet@2x.png 2x"
+                            src="./images/mainpageimages/teamcard2-tablet.png" alt="Smiling woman with glasses" width="354">
+
+                        <img class="ot__picture ot__picture--desk"
+                            srcset="./images/mainpageimages/teamcard2-desk.png 1x, ./images/mainpageimages/teamcard2-desk@2x.png 2x"
+                            src="./images/mainpageimages/teamcard2-desk.png" alt="Smiling woman with glasses" width="270">
+
                         <h3 class="ot__title">Kylie Evans</h3>
                         <p class="ot__text">Frontend Developer</p>
-                        <ul class="socials">
+                        <ul class="socials ot__cardList">
                             <li class="socials__item">
                                 <a href="" class="socials__link ot__link">
                                     <svg class="socials__icon" width="20" height="20">
@@ -343,10 +360,22 @@
                         </ul>
                     </li>
                     <li class="ot__item">
-                        <img class="ot__picture" src="./images/mainpageimages/teamcard3.jpg" alt="Smiling guy" width="270">
+
+                        <img class="ot__picture ot__picture--mobile"
+                            srcset="./images/mainpageimages/teamcard3-mobile.png 1x, ./images/mainpageimages/teamcard3-mobile@2x.png 2x"
+                            src="./images/mainpageimages/teamcard3-mobile.png" alt="Smiling guy" width="450">
+
+                        <img class="ot__picture ot__picture--tablet"
+                            srcset="./images/mainpageimages/teamcard3-tablet.png 1x, ./images/mainpageimages/teamcard3-tablet@2x.png 2x"
+                            src="./images/mainpageimages/teamcard3-tablet.png" alt="Smiling guy" width="354">
+
+                        <img class="ot__picture ot__picture--desk"
+                            srcset="./images/mainpageimages/teamcard3-desk.png 1x, ./images/mainpageimages/teamcard3-desk@2x.png 2x"
+                            src="./images/mainpageimages/teamcard3-desk.png" alt="Smiling guy" width="270">
+
                         <h3 class="ot__title">Ryan Harris</h3>
                         <p class="ot__text">Marketing</p>
-                        <ul class="socials">
+                        <ul class="socials ot__cardList">
                             <li class="socials__item">
                                 <a href="" class="socials__link ot__link">
                                     <svg class="socials__icon" width="20" height="20">
@@ -378,10 +407,22 @@
                         </ul>
                     </li>
                     <li class="ot__item">
-                        <img class="ot__picture" src="./images/mainpageimages/teamcard4.jpg" alt="Guy smirking" width="270">
+
+                        <img class="ot__picture ot__picture--mobile"
+                            srcset="./images/mainpageimages/teamcard4-mobile.png 1x, ./images/mainpageimages/teamcard4-mobile@2x.png 2x"
+                            src="./images/mainpageimages/teamcard4-mobile.png" alt="Guy smirking" width="450">
+
+                        <img class="ot__picture ot__picture--tablet"
+                            srcset="./images/mainpageimages/teamcard4-tablet.png 1x, ./images/mainpageimages/teamcard4-tablet@2x.png 2x"
+                            src="./images/mainpageimages/teamcard4-tablet.png" alt="Guy smirking" width="354">
+
+                        <img class="ot__picture ot__picture--desk"
+                            srcset="./images/mainpageimages/teamcard4-desk.png 1x, ./images/mainpageimages/teamcard4-desk@2x.png 2x"
+                            src="./images/mainpageimages/teamcard4-desk.png" alt="Guy smirking" width="270">
+
                         <h3 class="ot__title">Tyler Moore</h3>
                         <p class="ot__text">UI Designer</p>
-                        <ul class="socials">
+                        <ul class="socials ot__carList">
                             <li class="socials__item">
                                 <a href="" class="socials__link ot__link ot__link">
                                     <svg class="socials__icon" width="20" height="20">
@@ -473,54 +514,57 @@
 
     <footer class="footer">    
         <div class="container footer__container">
-            <div>
-                <a href="./index.html" class="logo footer__logo"><span class="logo--blue">Web</span><span class="footer__logo--white">Studio</span></a>
-                <address class="footer__address">
-                    <a href="https://goo.gl/maps/pZUgdTMqykUNrWZ28" target="_blank" class="footer__link">
-                        695 Park Ave, New York, NY 10065, United States
-                    </a>
-                    <ul class="footer__contact-list">
-                        <li class="footer__contact-item">
-                            <a href="mailto:info@example.com" class="footer__link footer__link--opacity">info@example.com</a>
+            <div class="footer__blockContainer">
+                <div>
+                    <a href="./index.html" class="logo footer__logo"><span class="logo--blue">Web</span><span
+                            class="footer__logo--white">Studio</span></a>
+                    <address class="footer__address">
+                        <a href="https://goo.gl/maps/pZUgdTMqykUNrWZ28" target="_blank" class="footer__addressLink">
+                            695 Park Ave, NY 10065, USA
+                        </a>
+                        <ul class="footer__contactList">
+                            <li class="footer__contactItem">
+                                <a href="mailto:info@example.com" class="footer__link">info@example.com</a>
+                            </li>
+                            <li class="footer__contactItem">
+                                <a href="tel:+12127724150" class="footer__link">+1 212-772-4150</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="fuo">
+                    <h4 class="fuo__title">Find us on</h4>
+                    <ul class="socials fuo__list">
+                        <li class="socials__item">
+                            <a href="" class="socials__link fuo__link">
+                                <svg class="socials__icon" width="20" height="20">
+                                    <use href="./images/svgimages/sprite.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
                         </li>
-                        <li class="footer__contact-item">
-                            <a href="tel:+12127724150" class="footer__link footer__link--opacity">+1 212-772-4150</a>
+                        <li class="socials__item">
+                            <a href="" class="socials__link fuo__link">
+                                <svg class="socials__icon" width="20" height="20">
+                                    <use href="./images/svgimages/sprite.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a href="" class="socials__link fuo__link">
+                                <svg class="socials__icon" width="20" height="20">
+                                    <use href="./images/svgimages/sprite.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a href="" class="socials__link fuo__link">
+                                <svg class="socials__icon" width="20" height="20">
+                                    <use href="./images/svgimages/sprite.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
-                </address>
-            </div>
-            <div class="fuo">
-                <h4 class="fuo__title">Find us on</h4>
-                <ul class="socials">
-                    <li class="socials__item">
-                        <a href="" class="socials__link fuo__link">
-                            <svg class="socials__icon" width="20" height="20">
-                                <use href="./images/svgimages/sprite.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="socials__item">
-                        <a href="" class="socials__link fuo__link">
-                            <svg class="socials__icon" width="20" height="20">
-                                <use href="./images/svgimages/sprite.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="socials__item">
-                        <a href="" class="socials__link fuo__link">
-                            <svg class="socials__icon" width="20" height="20">
-                                <use href="./images/svgimages/sprite.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="socials__item">
-                        <a href="" class="socials__link fuo__link">
-                            <svg class="socials__icon" width="20" height="20">
-                                <use href="./images/svgimages/sprite.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
             <div class="subscribe">
                 <h4 class="subscribe__title">Subscribe to the newsletter</h4>

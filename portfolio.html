@@ -12,13 +12,21 @@
     
     <!-- Top Nav Bar -->
     
-    <header>
-        <div class="container header">
-            <a href="./index.html" class="logo header__logo">WebStudio</a>
-            <nav>
+    <header class="header">
+        <div class="container header__container">
+            <a href="./index.html" class="logo header__logo"><span class="logo--blue">Web</span><span
+                    class="header__logo--black">Studio</span></a>
+            <div class="menuContainer">
+                <button class="header__link js-open-menu" type="button">
+                    <svg width="40" height="40" class="header__icon">
+                        <use href="./images/svgimages/sprite.svg#icon-menu"></use>
+                    </svg>
+                </button>
+            </div>
+            <nav class="headerNav">
                 <ul class="nav">
                     <li class="nav__item">
-                        <a href="./index.html" class="nav__link ">Studio</a>
+                        <a href="./index.html" class="nav__link">Studio</a>
                     </li>
                     <li class="nav__item">
                         <a href="./portfolio.html" class="nav__link nav__link--current">Portfolio</a>
@@ -28,7 +36,7 @@
                     </li>
                 </ul>
             </nav>
-            <ul class="contact">
+            <ul class="contact headerNav">
                 <li class="contact__container">
                     <a href="mailto:info@devstudio.com" class="contact__link">
                         <svg class="contact__icon" width="16" height="12">
@@ -49,27 +57,76 @@
         </div>
     </header>
     <main>
-    <section class="section button-bar__section">        
+    
+    <!-- Nav Menu Modal -->
+    
+    <div class="navModal modal js-menu-container">
+        <div class="navModal__container">
+            <button class="exit js-close-menu">
+                <svg class="exit__icon" width="40" height="40">
+                    <use href="./images/svgimages/sprite.svg#icon-close_40px"></use>
+                </svg>
+            </button>
+            <ul class="navModal__nav">
+                <li class="navModal__item">
+                    <a href="./index.html" class="navModal__link">Studio</a>
+                </li>
+                <li class="navModal__item">
+                    <a href="./portfolio.html" class="navModal__link">Portfolio</a>
+                </li>
+                <li class="navModal__item">
+                    <a href="#" class="navModal__link">Contacts</a>
+                </li>
+            </ul>
+            <ul class="navContacts">
+                <li class="navContacts__item">
+                    <a href="tel:+12127724150" class="navContacts__link navContacts__link--phone">
+                        +1 212-772-4150
+                    </a>
+                </li>
+                <li class="navContacts__item">
+                    <a href="mailto:info@devstudio.com" class="navContacts__link navContacts__link--email">
+                        info@devstudio.com
+                    </a>
+                </li>
+            </ul>
+            <ul class="socialLinks__list">
+                <li class="socialLinks__item">
+                    <a href="" class="socialLinks__link">Instagram</a>
+                </li>
+                <li class="socialLinks__item">
+                    <a href="" class="socialLinks__link">Twitter</a>
+                </li>
+                <li class="socialLinks__item">
+                    <a href="" class="socialLinks__link">Facebook</a>
+                </li>
+                <li class="socialLinks__item">
+                    <a href="" class="socialLinks__link">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+     <!-- Portfolio button bar section -->
+     
+        <section class="section buttonBar__section">        
         <div class="container">
-            <h1 class="button-bar__title">Our Portfolio</h1>
-
-    <!-- Portfolio button bar section -->
-
-            <ul class="button-bar__list">
-                <li class="button-bar__item">
-                    <button type="button" class="button-bar__button">All</button>
+            <h1 class="buttonBar__title">Our Portfolio</h1>
+            <ul class="buttonBar__list">
+                <li class="buttonBar__item">
+                    <button type="button" class="buttonBar__button">All</button>
                 </li>
-                <li class="button-bar__item">
-                    <button type="button" class="button-bar__button">Web-sites</button>
+                <li class="buttonBar__item">
+                    <button type="button" class="buttonBar__button">Web-sites</button>
                 </li>
-                <li class="button-bar__item">
-                    <button type="button" class="button-bar__button">Apps</button>
+                <li class="buttonBar__item">
+                    <button type="button" class="buttonBar__button">Apps</button>
                 </li>
-                <li class="button-bar__item">
-                    <button type="button" class="button-bar__button">Design</button>
+                <li class="buttonBar__item">
+                    <button type="button" class="buttonBar__button">Design</button>
                 </li>
-                <li class="button-bar__item">
-                    <button type="button" class="button-bar__button">Marketing</button>
+                <li class="buttonBar__item">
+                    <button type="button" class="buttonBar__button">Marketing</button>
                 </li>
             </ul>
 
@@ -78,7 +135,15 @@
             <ul class="card">
                 <li class="card__item">
                     <a href="#" class="card__link">
-                        <img src="./images/portfolioimages/portfolio1.jpg" alt="Labtop Screen" width="370">
+                        <img class="card__image card__image--mobile"
+                            srcset="./images/portfolioimages/portfolio1-mobile.png 1x, ./images/portfolioimages/portfolio1-mobile@2x.png 2x"
+                            src="./images/portfolioimages/portfolio1-desk.png" alt="Labtop Screen" width="450">
+                        <img class="card__image card__image--tablet"
+                            srcset="./images/portfolioimages/portfolio1-tablet.png 1x, ./images/portfolioimages/portfolio1-tablet@2x.png 2x"
+                            src="./images/portfolioimages/portfolio1-desk.png" alt="Labtop Screen" width="354">
+                        <img class="card__image card__image--desk"
+                            srcset="./images/portfolioimages/portfolio1-desk.png 1x, ./images/portfolioimages/portfolio1-desk@2x.png 2x"
+                            src="./images/portfolioimages/portfolio1-desk.png" alt="Labtop Screen" width="370">
                         <div class="card__overlay">
                             <p>Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platfom for digital
                                 espionage and attacks on competitors' secure servers.</p>
@@ -91,7 +156,15 @@
                 </li>
                 <li class="card__item">
                     <a href="#" class="card__link">
-                        <img src="./images/portfolioimages/portfolio2.jpg" alt="Basketball Players" width="370">
+                        <img class="card__image card__image--mobile"
+                            srcset="./images/portfolioimages/portfolio2-mobile.png 1x, ./images/portfolioimages/portfolio2-mobile@2x.png 2x"
+                            src="./images/portfolioimages/portfolio2-desk.png" alt="Basketball Players" width="450">
+                        <img class="card__image card__image--tablet"
+                            srcset="./images/portfolioimages/portfolio2-tablet.png 1x, ./images/portfolioimages/portfolio2-tablet@2x.png 2x"
+                            src="./images/portfolioimages/portfolio2-desk.png" alt="Basketball Players" width="354">
+                        <img class="card__image card__image--desk"
+                            srcset="./images/portfolioimages/portfolio2-desk.png 1x, ./images/portfolioimages/portfolio2-desk@2x.png 2x"
+                            src="./images/portfolioimages/portfolio2-desk.png" alt="Basketball Players" width="370">
                         <div class="card__overlay">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, fuga facere! Cum illo obcaecati itaque aperiam
                                 rem quasi et soluta. Commodi tempora rem veritatis cumque fuga dolores perferendis molestias accusantium!</p>
@@ -104,7 +177,15 @@
                 </li>
                 <li class="card__item">
                     <a href="#" class="card__link">
-                        <img src="./images/portfolioimages/portfolio3.jpg" alt="Seafood Restaurant Logo" width="370">
+                        <img class="card__image card__image--mobile"
+                            srcset="./images/portfolioimages/portfolio3-mobile.png 1x, ./images/portfolioimages/portfolio3-mobile@2x.png 2x"
+                            src="./images/portfolioimages/portfolio3-desk.png" alt="Seafood Restaurant Logo" width="450">
+                        <img class="card__image card__image--tablet"
+                            srcset="./images/portfolioimages/portfolio3-tablet.png 1x, ./images/portfolioimages/portfolio3-tablet@2x.png 2x"
+                            src="./images/portfolioimages/portfolio3-desk.png" alt="Seafood Restaurant Logo" width="354">
+                        <img class="card__image card__image--desk"
+                            srcset="./images/portfolioimages/portfolio3-desk.png 1x, ./images/portfolioimages/portfolio3-desk@2x.png 2x"
+                            src="./images/portfolioimages/portfolio3-desk.png" alt="Seafood Restaurant Logo" width="370">
                         <div class="card__overlay">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, fuga facere! Cum illo obcaecati itaque aperiam
                                 rem quasi et soluta. Commodi tempora rem veritatis cumque fuga dolores perferendis molestias accusantium!</p>
@@ -117,7 +198,15 @@
                 </li>
                 <li class="card__item">
                     <a href="#" class="card__link">
-                        <img src="./images/portfolioimages/portfolio4.jpg" alt="Headphones" width="370">
+                        <img class="card__image card__image--mobile"
+                            srcset="./images/portfolioimages/portfolio4-mobile.png 1x, ./images/portfolioimages/portfolio4-mobile@2x.png 2x"
+                            src="./images/portfolioimages/portfolio4-desk.png" alt="Headphones" width="450">
+                        <img class="card__image card__image--tablet"
+                            srcset="./images/portfolioimages/portfolio4-tablet.png 1x, ./images/portfolioimages/portfolio4-tablet@2x.png 2x"
+                            src="./images/portfolioimages/portfolio4-desk.png" alt="Headphones" width="354">
+                        <img class="card__image card__image--desk"
+                            srcset="./images/portfolioimages/portfolio4-desk.png 1x, ./images/portfolioimages/portfolio4-desk@2x.png 2x"
+                            src="./images/portfolioimages/portfolio4-desk.png" alt="Headphones" width="370">
                         <div class="card__overlay">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, fuga facere! Cum illo obcaecati itaque aperiam
                                 rem quasi et soluta. Commodi tempora rem veritatis cumque fuga dolores perferendis molestias accusantium!</p>
@@ -130,7 +219,15 @@
                 </li>
                 <li class="card__item">
                     <a href="#" class="card__link">
-                        <img src="./images/portfolioimages/portfolio5.jpg" alt="Two Parcels" width="370">
+                        <img class="card__image card__image--mobile"
+                            srcset="./images/portfolioimages/portfolio5-mobile.png 1x, ./images/portfolioimages/portfolio5-mobile@2x.png 2x"
+                            src="./images/portfolioimages/portfolio5-desk.png" alt="Two Parcels" width="450">
+                        <img class="card__image card__image--tablet"
+                            srcset="./images/portfolioimages/portfolio5-tablet.png 1x, ./images/portfolioimages/portfolio5-tablet@2x.png 2x"
+                            src="./images/portfolioimages/portfolio5-desk.png" alt="Two Parcels" width="354">
+                        <img class="card__image card__image--desk"
+                            srcset="./images/portfolioimages/portfolio5-desk.png 1x, ./images/portfolioimages/portfolio5-desk@2x.png 2x"
+                            src="./images/portfolioimages/portfolio5-desk.png" alt="Two Parcels" width="370">
                         <div class="card__overlay">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, fuga facere! Cum illo obcaecati itaque aperiam
                                 rem quasi et soluta. Commodi tempora rem veritatis cumque fuga dolores perferendis molestias accusantium!</p>
@@ -143,7 +240,15 @@
                 </li>
                 <li class="card__item">
                     <a href="#" class="card__link">
-                        <img src="./images/portfolioimages/portfolio6.jpg" alt="Computer monitor" width="370">
+                        <img class="card__image card__image--mobile"
+                            srcset="./images/portfolioimages/portfolio6-mobile.png 1x, ./images/portfolioimages/portfolio6-mobile@2x.png 2x"
+                            src="./images/portfolioimages/portfolio6-desk.png" alt="Computer monitor" width="450">
+                        <img class="card__image card__image--tablet"
+                            srcset="./images/portfolioimages/portfolio6-tablet.png 1x, ./images/portfolioimages/portfolio6-tablet@2x.png 2x"
+                            src="./images/portfolioimages/portfolio6-desk.png" alt="Computer monitor" width="354">
+                        <img class="card__image card__image--desk"
+                            srcset="./images/portfolioimages/portfolio6-desk.png 1x, ./images/portfolioimages/portfolio6-desk@2x.png 2x"
+                            src="./images/portfolioimages/portfolio6-desk.png" alt="Computer monitor" width="370">
                         <div class="card__overlay">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, fuga facere! Cum illo obcaecati itaque aperiam
                                 rem quasi et soluta. Commodi tempora rem veritatis cumque fuga dolores perferendis molestias accusantium!</p>
@@ -156,7 +261,15 @@
                 </li>
                 <li class="card__item">
                     <a href="#" class="card__link">
-                        <img src="./images/portfolioimages/portfolio7.jpg" alt="Magazine pages" width="370">
+                        <img class="card__image card__image--mobile"
+                            srcset="./images/portfolioimages/portfolio7-mobile.png 1x, ./images/portfolioimages/portfolio7-mobile@2x.png 2x"
+                            src="./images/portfolioimages/portfolio7-desk.png" alt="Magazine pages" width="450">
+                        <img class="card__image card__image--tablet"
+                            srcset="./images/portfolioimages/portfolio7-tablet.png 1x, ./images/portfolioimages/portfolio7-tablet@2x.png 2x"
+                            src="./images/portfolioimages/portfolio7-desk.png" alt="Magazine pages" width="354">
+                        <img class="card__image card__image--desk"
+                            srcset="./images/portfolioimages/portfolio7-desk.png 1x, ./images/portfolioimages/portfolio7-desk@2x.png 2x"
+                            src="./images/portfolioimages/portfolio7-desk.png" alt="Magazine pages" width="370">
                         <div class="card__overlay">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, fuga facere! Cum illo obcaecati itaque aperiam
                                 rem quasi et soluta. Commodi tempora rem veritatis cumque fuga dolores perferendis molestias accusantium!</p>
@@ -169,6 +282,14 @@
                 </li>
                 <li class="card__item">
                     <a href="#" class="card__link">
+                        <img class="card__image card__image--mobile"
+                            srcset="./images/portfolioimages/portfolio8-mobile.png 1x, ./images/portfolioimages/portfolio8-mobile@2x.png 2x"
+                            src="./images/portfolioimages/portfolio8-desk.png" alt="Fancy Label" width="450">
+                        <img class="card__image card__image--tablet"
+                            srcset="./images/portfolioimages/portfolio8-tablet.png 1x, ./images/portfolioimages/portfolio8-tablet@2x.png 2x"
+                            src="./images/portfolioimages/portfolio8-desk.png" alt="Fancy Label" width="354">
+                        <img class="card__image card__image--desk"
+                            srcset="./images/portfolioimages/portfolio8-desk.png 1x, ./images/portfolioimages/portfolio8-desk@2x.png 2x"
                         <img src="./images/portfolioimages/portfolio8.jpg" alt="Fancy Label" width="370">
                         <div class="card__overlay">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, fuga facere! Cum illo obcaecati itaque aperiam
@@ -182,7 +303,15 @@
                 </li>
                 <li class="card__item">
                     <a href="#" class="card__link">
-                        <img src="./images/portfolioimages/portfolio9.jpg" alt="Hands Typing" width="370">
+                        <img class="card__image card__image--mobile"
+                            srcset="./images/portfolioimages/portfolio9-mobile.png 1x, ./images/portfolioimages/portfolio9-mobile@2x.png 2x"
+                            src="./images/portfolioimages/portfolio9-desk.png" alt="Hands Typing" width="450">
+                        <img class="card__image card__image--tablet"
+                            srcset="./images/portfolioimages/portfolio9-tablet.png 1x, ./images/portfolioimages/portfolio9-tablet@2x.png 2x"
+                            src="./images/portfolioimages/portfolio9-desk.png" alt="Hands Typing" width="354">
+                        <img class="card__image card__image--desk"
+                            srcset="./images/portfolioimages/portfolio9-desk.png 1x, ./images/portfolioimages/portfolio9-desk@2x.png 2x"
+                            src="./images/portfolioimages/portfolio9-desk.png" alt="Hands Typing" width="370">
                         <div class="card__overlay">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, fuga facere! Cum illo obcaecati itaque aperiam
                                 rem quasi et soluta. Commodi tempora rem veritatis cumque fuga dolores perferendis molestias accusantium!</p>
@@ -202,55 +331,57 @@
 
     <footer class="footer">
         <div class="container footer__container">
-            <div>
-                <a href="./index.html" class="logo footer__logo">Webstudio</a>
-                <address class="footer__address">
-                    <a href="https://goo.gl/maps/pZUgdTMqykUNrWZ28" target="_blank" class="footer__link">
-                        695 Park Ave, New York, NY 10065, United States
-                    </a>
-                    <ul class="footer__contact-list">
-                        <li class="footer__contact-item">
-                            <a href="mailto:info@example.com"
-                                class="footer__link footer__link--opacity">info@example.com</a>
+            <div class="footer__blockContainer">
+                <div>
+                    <a href="./index.html" class="logo footer__logo"><span class="logo--blue">Web</span><span
+                            class="footer__logo--white">Studio</span></a>
+                    <address class="footer__address">
+                        <a href="https://goo.gl/maps/pZUgdTMqykUNrWZ28" target="_blank" class="footer__addressLink">
+                            695 Park Ave, NY 10065, USA
+                        </a>
+                        <ul class="footer__contactList">
+                            <li class="footer__contactItem">
+                                <a href="mailto:info@example.com" class="footer__link">info@example.com</a>
+                            </li>
+                            <li class="footer__contactItem">
+                                <a href="tel:+12127724150" class="footer__link">+1 212-772-4150</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="fuo">
+                    <h4 class="fuo__title">Find us on</h4>
+                    <ul class="socials fuo__list">
+                        <li class="socials__item">
+                            <a href="" class="socials__link fuo__link">
+                                <svg class="socials__icon" width="20" height="20">
+                                    <use href="./images/svgimages/sprite.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
                         </li>
-                        <li class="footer__contact-item">
-                            <a href="tel:+12127724150" class="footer__link footer__link--opacity">+1 212-772-4150</a>
+                        <li class="socials__item">
+                            <a href="" class="socials__link fuo__link">
+                                <svg class="socials__icon" width="20" height="20">
+                                    <use href="./images/svgimages/sprite.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a href="" class="socials__link fuo__link">
+                                <svg class="socials__icon" width="20" height="20">
+                                    <use href="./images/svgimages/sprite.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a href="" class="socials__link fuo__link">
+                                <svg class="socials__icon" width="20" height="20">
+                                    <use href="./images/svgimages/sprite.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
-                </address>
-            </div>
-            <div class="fuo">
-                <h4 class="fuo__title">Find us on</h4>
-                <ul class="socials">
-                    <li class="socials__item">
-                        <a href="" class="socials__link fuo__link">
-                            <svg class="socials__icon" width="20" height="20">
-                                <use href="./images/svgimages/sprite.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="socials__item">
-                        <a href="" class="socials__link fuo__link">
-                            <svg class="socials__icon" width="20" height="20">
-                                <use href="./images/svgimages/sprite.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="socials__item">
-                        <a href="" class="socials__link fuo__link">
-                            <svg class="socials__icon" width="20" height="20">
-                                <use href="./images/svgimages/sprite.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="socials__item">
-                        <a href="" class="socials__link fuo__link">
-                            <svg class="socials__icon" width="20" height="20">
-                                <use href="./images/svgimages/sprite.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
             <div class="subscribe">
                 <h4 class="subscribe__title">Subscribe to the newsletter</h4>
@@ -268,5 +399,6 @@
             </div>
         </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

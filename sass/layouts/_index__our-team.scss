@@ -7,6 +7,11 @@ background-color: $backgroundLightColor;
         background-color: $backgroundLightColor;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+        @media screen and (min-width:1200px) {
+            
+        }
+        
     }
 
     &__item {
@@ -15,15 +20,56 @@ background-color: $backgroundLightColor;
         border-radius: 0px 0px 4px 4px;
         display: flex;
         flex-direction: column;
-        width: 270px;
+        width: 450px;
+        @media screen and (min-width: 768px) {
+            width: 354px;  
+        }
+        &:nth-child(odd) {
+            @media screen and (min-width: 768px) and (max-width: 1199px) {
+                margin-right: 30px;
+            }
+        }
+        &:nth-child(1), 
+        &:nth-child(2) {
+            @media screen and (min-width: 768px) and (max-width:1199px) {
+                margin-bottom: 30px;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
+        &:not(:last-child) {
+            @media screen and (min-width: 1200px) {
+                margin-right: 30px;
+            }
+        }
     }
 
-    &__item:not(:last-child) {
-        margin-right: 30px;
-    }
+    
 
     &__picture {
         margin-bottom: 30px;
+
+        &--mobile {
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        &--tablet {
+            display: none;
+            @media screen and (min-width: 768px) and (max-width: 1199px) {
+                display: inline;
+            }            
+        }    
+
+        &--desk {
+            display: none;
+            @media screen and (min-width: 1200px) {
+                display: inline;
+            }
+        }
+        
     }
 
     &__title {
@@ -43,7 +89,7 @@ background-color: $backgroundLightColor;
         margin-bottom: 16px;
     }
 
-    &__card-list {
+    &__cardList {
         margin-bottom: 30px;
     }    
 

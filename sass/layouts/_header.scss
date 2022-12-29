@@ -1,15 +1,25 @@
 @use '../utilities/variables' as *;
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-
-    @media screen and (min-width: 768px) {
-        height: 80px;
+    margin: 0 auto;
+    @media screen and (min-width: 480px) {
+        max-width: 480px;
     }
-
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+    }
+    @media screen and (min-width: 1200px) {
+        max-width: 1200px;
+    }
+    &__container {
+         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        @media screen and (min-width: 768px) {
+            height: 80px;
+        }
+    }   
     &__logo {
         display: block;
 

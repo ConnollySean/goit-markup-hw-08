@@ -1,17 +1,19 @@
 @use '../utilities/variables' as *;
 
-.navModal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 99;
-        background-color: $secondaryTitleColor;
-        display: flex;
-        flex-direction: column;
+.navModal {        
         transform: translateX(100%);
         transition: transform 250ms ease-in-out;
+        &__container {
+            background-color: $secondaryTitleColor;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            height: 100vh;
+            @media screen and (min-width: 480px) {
+                max-width: 480px;
+            }
+        }
+        
     &.is-open {
         transform: translateX(0);
     }    
@@ -59,27 +61,47 @@
 
 .navContacts {
     margin-top: 306px;
+    margin-left: 40px;
     &__item {
         &:not(:last-child) {
             margin-bottom: 32px;
         }
     }
-}
-
-.modalPhone {
-    font-size: 34px;
-    line-height: calc(40/34);
-    letter-spacing: 0.02em;
-    color: $accentColor;
-    &:hover,
-    :focus {
-    text-decoration: underline;    
+    &__link {
+        &--phone {
+            font-size: 34px;
+            line-height: calc(40/34);
+            letter-spacing: 0.02em;
+            color: $accentColor;
+            &:hover,
+            :focus {
+            text-decoration: underline;  
+            }
+        }    
+        &--email {
+            font-size: 24px;
+            line-height: calc(28/24);
+            letter-spacing: 0.02em;
+            color: $secondaryTextColor;
+        }
     }
 }
 
-.modalEmail {
-    font-size: 24px;
-    line-height: calc(28/24);
-    letter-spacing: 0.02em;
-    color: $secondaryTextColor;
+.socialLinks {
+    &__list {
+        display: flex;
+        margin-left: 40px;
+        margin-top: 64px;
+    }
+    &__item {
+        &:not(:last-child) {
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+            padding-right: 10px;
+            margin-right: 10px;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: $accentColor;
+    }
 }

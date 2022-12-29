@@ -1,9 +1,8 @@
 @use '../utilities/variables' as *;
 
-.button-bar {
+.buttonBar {
     &__section {
-        margin-bottom: 50px;
-        padding-bottom: none;
+        margin-bottom: -30px;
     }
 
     &__title {
@@ -21,12 +20,25 @@
 
     &__list {
         display: flex;
-        justify-content: center;
-        margin-bottom: 50px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
     }
 
-    &__item:not(:last-child) {
+    &__item {
+        &:not(:last-child) {
         margin-right: 8px;
+        }
+        &:first-child {
+            @media screen and (max-width:767px) {
+                margin-bottom: 21px;
+            }
+        }
+        &:nth-child(3) {
+            @media screen and (max-width: 767px) {
+                margin-right: 25px;
+            }
+        }
     }
 
     &__button {
