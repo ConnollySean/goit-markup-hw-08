@@ -9,29 +9,26 @@
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
 }
-
 .heroModal {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &__container {
-    width: 450px;
-    height: 609px;
-    position: absolute;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: $secondaryTitleColor;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    padding-top: 8px;
-
-    @media screen and (min-width: 1200px) {
-        width: 528px;
-        height: 581px;
+        width: 450px;
+        height: 609px;
+        position: absolute;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $secondaryTitleColor;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        padding-top: 8px;
+        @media screen and (min-width: 1200px) {
+            width: 528px;
+            height: 581px;
+        }
     }
 }
-}
-
 .close {
     width: 30px;
     height: 30px;
@@ -44,27 +41,22 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-left: 412px;
     cursor: pointer;
-
-    @media screen and (min-width: 1200px) {
-        margin-left: 490px;       
-    }
-
     &:hover,
     &:focus {
         background-color: $accentColor;
         color: $secondaryTitleColor;
     }
-
+    @media screen and (min-width: 1200px) {
+        margin-left: 490px;       
+    }
     &__icon {
         fill: currentColor;
     }
 }
-
 .form {
     display: flex;
     flex-direction: column;
     margin: 2px 40px 40px 40px;
-
     &__title {
         font-weight: 700;
         font-size: 20px;
@@ -73,16 +65,13 @@
         color: $primaryTitleColor;
         margin-bottom: 12px;
     }
-
     &__container {
         display: flex;
         flex-direction: column;
     }
-
     &__label {
         display: flex;
         flex-direction: column;
-
         &>span {
             margin-bottom: 4px;
             margin-top: 10px;
@@ -92,7 +81,6 @@
             letter-spacing: 0.01em;
             color: $secondaryTextColor;
         }
-
         &>textarea {
             height: 96px;
             padding: 12px 16px;
@@ -101,13 +89,11 @@
             margin-bottom: 20px;
             cursor: pointer;
             transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
             &:focus {
                 @extend %modalFocus;
             }
         }
     }
-
     &__button {
         margin-top: 20px;
         font-weight: 700;
@@ -127,12 +113,10 @@
         border: none;
     }
 }
-
 .bar {
     position: relative;
     width: 100%;
     display: block;
-
     &__input {
         width: 100%;
         border: 1px solid rgba(33, 33, 33, 0.2);
@@ -141,12 +125,10 @@
         padding: 0 12px 0 42px;
         cursor: pointer;
         transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
         &:focus {
             @extend %modalFocus;
         }
     }
-
     &__icon {
         position: absolute;
         top: 50%;
@@ -154,12 +136,10 @@
         left: 12px;
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
     }
-
     &__input:focus+.bar__icon {
         fill: $accentColor;
     }
 }
-
 .checkbox {
     cursor: pointer;
     margin-left: 12px;
@@ -167,17 +147,14 @@
     color: $primaryTextColor;
     display: none;
     pointer-events: none;
-
     &:checked+.tos>span>.tos__checked {
         opacity: 1;
     }
-
     &:checked+.tos>.tos__container {
         background-color: $accentColor;
         border: none;
     }
 }
-
 .tos {
     display: flex;
     cursor: pointer;
@@ -185,7 +162,6 @@
     font-size: 14px;
     line-height: calc(24/14);
     color: $secondaryTextColor;
-
     &__container {
         width: 15px;
         height: 15px;
@@ -198,7 +174,6 @@
         align-items: center;
         justify-content: center;
     }
-
     &__checked {
         opacity: 0;
         transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);

@@ -1,19 +1,18 @@
 @use '../utilities/variables' as *;
 
 .navModal {        
-        transform: translateX(100%);
-        transition: transform 250ms ease-in-out;
-        &__container {
-            background-color: $secondaryTitleColor;
-            display: flex;
-            flex-direction: column;
-            margin: 0 auto;
-            height: 100vh;
-            @media screen and (min-width: 480px) {
-                max-width: 480px;
-            }
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+    &__container {
+        background-color: $secondaryTitleColor;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        height: 100vh;
+        @media screen and (min-width: 480px) {
+            max-width: 480px;
         }
-        
+    }
     &.is-open {
         transform: translateX(0);
     }    
@@ -35,8 +34,6 @@
         }        
     }
 }
-
-
 .exit {
     color: $primaryTitleColor;
     height: 40px;
@@ -50,15 +47,13 @@
     align-items: center;
     justify-content: center;
     &:hover,
-        &:focus {
-            color: $accentColor
-        }
-    
-        &__icon {
-            fill: currentColor;
-        }
+    &:focus {
+        color: $accentColor
+    }
+    &__icon {
+        fill: currentColor;
+    }
 }
-
 .navContacts {
     margin-top: 306px;
     margin-left: 40px;
@@ -75,7 +70,7 @@
             color: $accentColor;
             &:hover,
             :focus {
-            text-decoration: underline;  
+                text-decoration: underline;  
             }
         }    
         &--email {
@@ -86,7 +81,6 @@
         }
     }
 }
-
 .socialLinks {
     &__list {
         display: flex;

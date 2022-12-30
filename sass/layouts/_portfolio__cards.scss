@@ -3,36 +3,33 @@
 .card {
     display: flex;
     flex-wrap: wrap;
-
-    
-
     &__item {
-
+        max-width: 450px;
         background-color: $secondaryTitleColor;
         border: 1px solid #EEEEEE;
         position: relative;
         overflow: hidden;
         margin-bottom: 30px;
-        &:nth-child(3n + 1),
-        &:nth-child(3n + 2) {
-            @media screen and (min-width: 1200px) {
-            margin-right: 26px;
+        @media screen and (min-width: 768px) {
+            width: 354px;
         }
+        @media screen and (min-width: 768px) and (max-width: 1199px){
+            &:nth-child(odd) {
+                margin-right: 25px;
+            }     
         }
-
-        
-        &:nth-child(odd) {
-            @media screen and (min-width: 768px) and (max-width: 1199px){
-                margin-right: 26px;
+        @media screen and (min-width:1200px) {
+            width: 370px;
+            &:nth-child(3n + 1),
+            &:nth-child(3n + 2) {
+                margin-right: 30px;
             }
         }
-
         &:hover .card__overlay,
         &:focus .card__overlay {
             transform: translateY(-100%);
             transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         &:hover,
         &:focus {
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
@@ -40,31 +37,25 @@
                 1px 4px 6px rgba(0, 0, 0, 0.16);
         }
     }
-
     &__image {
         &--mobile {
                 @media screen and (min-width: 768px) {
                     display: none;
                 }
             }
-        
             &--tablet {
                 display: none;
-        
                 @media screen and (min-width: 768px) and (max-width: 1199px) {
                     display: inline;
                 }
             }
-        
             &--desk {
                 display: none;
-        
                 @media screen and (min-width: 1200px) {
                     display: inline;
                 }
             }
     }
-
     &__overlay {
         color: $secondaryTitleColor;
         position: absolute;
@@ -78,24 +69,21 @@
         justify-content: center;
         top: 294px;
     }
-
     &__overlay>p {
-        width: 322px;
+        max-width: 322px;
         margin-top: 63px;
         font-weight: 400;
         font-size: 18px;
         line-height: calc(28/18);
     }
-
     &__textbox {
         position: relative;
         z-index: 2;
         background-color: $secondaryTitleColor;
         display: flex;
         flex-direction: column;
-        margin-top: -4px;
+        margin-top: -5px;
     }
-
     &__title {
         font-weight: 700;
         font-size: 18px;
@@ -105,7 +93,6 @@
         margin-top: 20px;
         margin-left: 24px;
     }
-
     &__text {
         font-weight: 400;
         font-size: 16px;

@@ -3,24 +3,19 @@
 .wwd {
     display: none;
     padding-top: 0px;
-
     @media screen and (min-width: 1200px) {
         display: block;
     }
-
     &__list {
         display: flex;
         justify-content: center;
     }
-
     &__item {
         position: relative;
     }
-
     &__item:not(:last-child) {
         margin-right: 30px;
     }
-
     &__overlay {
         position: absolute;
         height: 70px;
@@ -28,7 +23,6 @@
         background: rgba(47, 48, 58, 0.8);
         bottom: 0;
     }
-
     &__overlay>p {
         color: $secondaryTitleColor;
         font-weight: 700;
