@@ -945,10 +945,14 @@ textarea {
   text-transform: uppercase;
   color: #FFF;
   display: inline-block;
-  max-width: 360px;
   margin-bottom: 30px;
   font-size: 26px;
   line-height: 1.6153846154;
+}
+@media screen and (max-width: 1199px) {
+  .hero__title {
+    max-width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
