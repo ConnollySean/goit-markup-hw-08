@@ -275,11 +275,16 @@ textarea {
   transition: transform 250ms ease-in-out;
 }
 .navModal__container {
+  height: 100vh;
+  width: 100vw;
+  padding: 0px 40px;
   background-color: #FFF;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
   height: 100vh;
+  position: relative;
 }
 @media screen and (min-width: 480px) {
   .navModal__container {
@@ -288,6 +293,12 @@ textarea {
 }
 .navModal.is-open {
   transform: translateX(0);
+}
+.navModal__nav {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .navModal__item:not(:last-child) {
   margin-bottom: 32px;
@@ -298,7 +309,6 @@ textarea {
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: #212121;
-  margin-left: 40px;
 }
 .navModal__link:hover, .navModal__link:focus {
   color: #2196F3;
@@ -308,8 +318,9 @@ textarea {
   color: #212121;
   height: 40px;
   width: 40px;
-  margin-top: 10px;
-  margin-left: 425px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
   background: none;
   border: none;
   cursor: pointer;
@@ -325,8 +336,13 @@ textarea {
 }
 
 .navContacts {
-  margin-top: 306px;
-  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 411px) {
+  .navContacts {
+    align-items: center;
+  }
 }
 .navContacts__item:not(:last-child) {
   margin-bottom: 32px;
@@ -341,6 +357,11 @@ textarea {
 .navContacts__link--phone :focus {
   text-decoration: underline;
 }
+@media screen and (max-width: 352px) {
+  .navContacts__link--phone {
+    font-size: 29px;
+  }
+}
 .navContacts__link--email {
   font-size: 24px;
   line-height: 1.1666666667;
@@ -350,13 +371,35 @@ textarea {
 
 .socialLinks__list {
   display: flex;
-  margin-left: 40px;
+  flex-wrap: wrap;
   margin-top: 64px;
+  margin-bottom: 48px;
+  justify-content: center;
 }
-.socialLinks__item:not(:last-child) {
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-  padding-right: 10px;
-  margin-right: 10px;
+@media screen and (max-width: 411px) {
+  .socialLinks__list {
+    margin-top: 48px;
+  }
+}
+@media screen and (max-width: 411px) {
+  .socialLinks__item {
+    flex-basis: 50%;
+    text-align: center;
+    padding: 15px 20px;
+  }
+  .socialLinks__item:nth-child(odd) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  .socialLinks__item:nth-last-child(n+3) {
+    border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+@media screen and (min-width: 412px) {
+  .socialLinks__item:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+    margin-right: 10px;
+  }
 }
 .socialLinks__link {
   text-decoration: none;

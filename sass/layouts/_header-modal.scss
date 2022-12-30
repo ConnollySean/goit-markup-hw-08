@@ -4,11 +4,16 @@
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
     &__container {
+        height: 100vh;
+        width: 100vw;
+        padding: 0px 40px;
         background-color: $secondaryTitleColor;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         margin: 0 auto;
         height: 100vh;
+        position: relative;
         @media screen and (min-width: 480px) {
             max-width: 480px;
         }
@@ -16,6 +21,12 @@
     &.is-open {
         transform: translateX(0);
     }    
+    &__nav {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     &__item {
         &:not(:last-child) {
             margin-bottom: 32px;
@@ -27,7 +38,6 @@
         line-height: calc(47/40);
         letter-spacing: 0.02em;        
         color: $primaryTitleColor;
-        margin-left: 40px;
         &:hover,
         &:focus {
             color: $accentColor
@@ -38,8 +48,9 @@
     color: $primaryTitleColor;
     height: 40px;
     width: 40px;
-    margin-top: 10px;
-    margin-left: 425px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
     background: none;
     border: none;
     cursor: pointer;
@@ -55,8 +66,11 @@
     }
 }
 .navContacts {
-    margin-top: 306px;
-    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 411px) {
+        align-items: center;
+    }
     &__item {
         &:not(:last-child) {
             margin-bottom: 32px;
@@ -72,6 +86,9 @@
             :focus {
                 text-decoration: underline;  
             }
+            @media screen and (max-width: 352px) {
+                font-size: 29px;
+            }
         }    
         &--email {
             font-size: 24px;
@@ -84,14 +101,32 @@
 .socialLinks {
     &__list {
         display: flex;
-        margin-left: 40px;
+        flex-wrap: wrap;
         margin-top: 64px;
+        margin-bottom: 48px;
+        justify-content: center;
+        @media screen and (max-width: 411px) {
+            margin-top: 48px;
+        }
     }
     &__item {
-        &:not(:last-child) {
-            border-right: 1px solid rgba(33, 33, 33, 0.2);
-            padding-right: 10px;
-            margin-right: 10px;
+        @media screen and (max-width: 411px) {
+            flex-basis: 50%;
+            text-align: center;
+            padding: 15px 20px;
+            &:nth-child(odd) {
+                border-right: 1px solid rgba(33, 33, 33, 0.2);
+            }
+            &:nth-last-child(n + 3) {
+                border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+            }
+        }
+        @media screen and (min-width: 412px) {
+            &:not(:last-child) {
+                border-right: 1px solid rgba(33, 33, 33, 0.2);
+                padding-right: 10px;
+                margin-right: 10px;
+            }
         }
     }
     &__link {
