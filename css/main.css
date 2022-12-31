@@ -790,7 +790,7 @@ textarea {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .heroModal__container {
-  width: 450px;
+  max-width: 450px;
   height: 609px;
   position: absolute;
   position: relative;
@@ -800,7 +800,6 @@ textarea {
   background: #FFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding-top: 8px;
 }
 @media screen and (min-width: 1200px) {
   .heroModal__container {
@@ -810,8 +809,11 @@ textarea {
 }
 
 .close {
+  position: absolute;
   width: 30px;
   height: 30px;
+  top: 8px;
+  right: 8px;
   background-color: #FFF;
   color: #000;
   display: flex;
@@ -819,7 +821,6 @@ textarea {
   justify-content: center;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-left: 412px;
   cursor: pointer;
 }
 .close:hover, .close:focus {
@@ -838,7 +839,8 @@ textarea {
 .form {
   display: flex;
   flex-direction: column;
-  margin: 2px 40px 40px 40px;
+  padding: 40px 40px;
+  height: 100%;
 }
 .form__title {
   font-weight: 700;
@@ -851,6 +853,7 @@ textarea {
 .form__container {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .form__label {
   display: flex;
@@ -866,13 +869,16 @@ textarea {
   color: #757575;
 }
 .form__label > textarea {
-  height: 96px;
+  height: 100%;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   margin-bottom: 20px;
   cursor: pointer;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form .textboxContainer {
+  height: 100%;
 }
 .form__button {
   margin-top: 20px;
@@ -1249,12 +1255,12 @@ textarea {
   border-color: #F5F4FA;
   border: none;
   transition: background-color 250ms ease-in-out;
+  transition: box-shadow 250ms ease-in-out;
 }
 .buttonBar__button:hover, .buttonBar__button:focus {
   background-color: #2196F3;
   color: #FFF;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 
 .card {
