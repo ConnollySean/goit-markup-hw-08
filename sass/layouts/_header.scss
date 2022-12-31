@@ -24,6 +24,7 @@
         background: none;
         border: none;
         cursor: pointer;
+        transition: color 250ms ease-in-out;
         &:hover,
         &:active {
             color: $accentColor;
@@ -62,11 +63,13 @@
         color: $primaryTextColor;
         padding: 32px 0;
         display: block;
+        transition: color 250ms ease-in-out;
+        &:hover,
+        &:focus {
+            color: $accentColor;
+        }
     }
-    &__link:hover,
-    &__link:focus {
-        color: $accentColor;
-    }
+    
     &__link--current {
         color: $accentColor;
         position: relative;
@@ -109,6 +112,7 @@
         color: $secondaryTextColor;        
         display: flex;
         align-items: center;
+        transition: color 250ms ease-in-out;
         &:hover,
         &:focus {
             color: $accentColor

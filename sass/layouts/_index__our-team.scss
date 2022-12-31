@@ -81,12 +81,14 @@
         margin-bottom: 30px;
     }    
     &__link {
-            background-color: $secondaryTitleColor;
-            color: $iconColor;
-    }
-    &__link:hover,
-    &__link:focus {
+        background-color: $secondaryTitleColor;
+        color: $iconColor;
+        transition: background-color 250ms ease-in-out;
+        &:hover,
+        &:focus {
             background-color: $accentColor;
             color: $secondaryTitleColor;
+        }
     }
+    
 }    

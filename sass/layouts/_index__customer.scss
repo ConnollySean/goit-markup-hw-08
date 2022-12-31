@@ -40,17 +40,18 @@
         justify-content: center;
         border: 1px solid $iconColor;
         border-radius: 4px;
+        transition: color 250ms ease-in-out;
+        &:hover,
+        &:focus {
+            color: $accentColor;
+            border-color: $accentColor;
+        }
         @media screen and (max-width: 410px) {
             padding: 16px 0;
         }      
         @media screen and (min-width: 411px) {
             padding: 16px 32px;
         }  
-    }
-    &__link:hover,
-    &__link:focus {
-        color: $accentColor;
-        border-color: $accentColor;
     }
     &__icon {
         fill: currentcolor;

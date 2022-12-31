@@ -68,6 +68,7 @@
         line-height: calc(16/14);
         color: $secondaryTitleColor;
         opacity: 0.6;
+        transition: color 250ms ease-in-out;
         &:hover,
         &:focus {
             color: $accentColor;
@@ -103,11 +104,11 @@
     &__link {
         background-color: rgba(255, 255, 255, 0.1);
         color: $secondaryTitleColor;
-    }
-    &__link:hover,
-    &__link:focus {
+        transition: background-color 250ms ease-in-out;
+        &:hover,
+        &:focus {
         background-color: $accentColor;
-        color: $secondaryTitleColor;
+        }
     }
 }
 .subscribe {
@@ -158,6 +159,7 @@
     }
     &__button {
         background: $accentColor;
+        color: $secondaryTitleColor;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         position: relative;
@@ -169,16 +171,21 @@
         border: none;
         margin-bottom: 60px;
         padding: 10px 66px 10px 48px;
+        transition: background-color 250ms ease-in-out;
+        &:hover,
+        &:focus {
+            background-color: $accentDarkColor;
+        }
         @media screen and (min-width: 1200px) {
             margin-bottom: 0;
         }
-    }
-    &__button>span {
-        font-weight: 700;
-        font-size: 16px;
-        line-height: calc(30/16);
-        letter-spacing: 0.06em;
-        color: $secondaryTitleColor;
+        &>span {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: calc(30/16);
+            letter-spacing: 0.06em;
+            color: inherit;
+        }    
     }
     &__icon {
         position: absolute;

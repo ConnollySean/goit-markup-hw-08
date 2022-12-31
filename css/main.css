@@ -168,6 +168,7 @@ textarea {
   background: none;
   border: none;
   cursor: pointer;
+  transition: color 250ms ease-in-out;
 }
 .header__link:hover, .header__link:active {
   color: #2196F3;
@@ -214,6 +215,7 @@ textarea {
   color: #212121;
   padding: 32px 0;
   display: block;
+  transition: color 250ms ease-in-out;
 }
 .nav__link:hover, .nav__link:focus {
   color: #2196F3;
@@ -261,6 +263,7 @@ textarea {
   color: #757575;
   display: flex;
   align-items: center;
+  transition: color 250ms ease-in-out;
 }
 .contact__link:hover, .contact__link:focus {
   color: #2196F3;
@@ -298,7 +301,11 @@ textarea {
   margin-top: 48px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+@media screen and (max-width: 411px) {
+  .navModal__nav {
+    align-items: center;
+  }
 }
 .navModal__item:not(:last-child) {
   margin-bottom: 32px;
@@ -309,6 +316,7 @@ textarea {
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: #212121;
+  transition: color 250ms ease-in-out;
 }
 .navModal__link:hover, .navModal__link:focus {
   color: #2196F3;
@@ -327,6 +335,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color 250ms ease-in-out;
 }
 .exit:hover, .exit:focus {
   color: #2196F3;
@@ -352,6 +361,9 @@ textarea {
   line-height: 1.1764705882;
   letter-spacing: 0.02em;
   color: #2196F3;
+  transition: -webkit-text-decoration 250ms ease-in-out;
+  transition: text-decoration 250ms ease-in-out;
+  transition: text-decoration 250ms ease-in-out, -webkit-text-decoration 250ms ease-in-out;
 }
 .navContacts__link--phone:hover,
 .navContacts__link--phone :focus {
@@ -485,6 +497,7 @@ textarea {
   line-height: 1.1428571429;
   color: #FFF;
   opacity: 0.6;
+  transition: color 250ms ease-in-out;
 }
 .footer__link:hover, .footer__link:focus {
   color: #2196F3;
@@ -526,10 +539,10 @@ textarea {
 .fuo__link {
   background-color: rgba(255, 255, 255, 0.1);
   color: #FFF;
+  transition: background-color 250ms ease-in-out;
 }
 .fuo__link:hover, .fuo__link:focus {
   background-color: #2196F3;
-  color: #FFF;
 }
 
 .subscribe {
@@ -589,6 +602,7 @@ textarea {
 }
 .subscribe__button {
   background: #2196F3;
+  color: #FFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   position: relative;
@@ -600,6 +614,10 @@ textarea {
   border: none;
   margin-bottom: 60px;
   padding: 10px 66px 10px 48px;
+  transition: background-color 250ms ease-in-out;
+}
+.subscribe__button:hover, .subscribe__button:focus {
+  background-color: #014379;
 }
 @media screen and (min-width: 1200px) {
   .subscribe__button {
@@ -611,7 +629,7 @@ textarea {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  color: #FFF;
+  color: inherit;
 }
 .subscribe__icon {
   position: absolute;
@@ -660,6 +678,11 @@ textarea {
   justify-content: center;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
+  transition: color 250ms ease-in-out;
+}
+.customer__link:hover, .customer__link:focus {
+  color: #2196F3;
+  border-color: #2196F3;
 }
 @media screen and (max-width: 410px) {
   .customer__link {
@@ -670,10 +693,6 @@ textarea {
   .customer__link {
     padding: 16px 32px;
   }
-}
-.customer__link:hover, .customer__link:focus {
-  color: #2196F3;
-  border-color: #2196F3;
 }
 .customer__icon {
   fill: currentcolor;
@@ -1020,6 +1039,7 @@ textarea {
   border-color: #2196F3;
   padding: 10px 18px;
   border: none;
+  transition: color 250ms ease-in-out;
 }
 .hero__button:hover, .hero__button:focus {
   color: #2196F3;
@@ -1123,6 +1143,7 @@ textarea {
 .ot__link {
   background-color: #FFF;
   color: #AFB1B8;
+  transition: background-color 250ms ease-in-out;
 }
 .ot__link:hover, .ot__link:focus {
   background-color: #2196F3;
@@ -1227,6 +1248,7 @@ textarea {
   padding: 6px 26px;
   border-color: #F5F4FA;
   border: none;
+  transition: background-color 250ms ease-in-out;
 }
 .buttonBar__button:hover, .buttonBar__button:focus {
   background-color: #2196F3;
@@ -1246,6 +1268,7 @@ textarea {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
+  transition: transform, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .card__item {
@@ -1267,7 +1290,6 @@ textarea {
 }
 .card__item:hover .card__overlay, .card__item:focus .card__overlay {
   transform: translateY(-100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card__item:hover, .card__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
