@@ -75,6 +75,9 @@
     &__label {
         display: flex;
         flex-direction: column;
+        &:nth-child(4) {
+            height: 100%;
+        }
         &>span {
             margin-bottom: 4px;
             margin-top: 10px;
@@ -96,9 +99,6 @@
                 @extend %modalFocus;
             }
         }
-    }
-    .textboxContainer {
-        height: 100%;
     }
     &__button {
         margin-top: 20px;
