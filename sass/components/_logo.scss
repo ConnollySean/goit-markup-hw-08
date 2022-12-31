@@ -5,8 +5,14 @@
     font-weight: 700;
     font-size: 24px;
     line-height: calc(28/24);
+    
     &--blue {
-        color: $accentColor
+        color: $accentColor;
+        transition: color 250ms ease-in-out;
+    }
+    &:hover>.logo--blue,
+    &:focus>.logo--blue {
+        color: $accentDarkColor;
     }
 }
 @media screen and (min-width: 768px) {

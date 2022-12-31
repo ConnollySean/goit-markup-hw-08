@@ -13,7 +13,12 @@
     &__logo {
         display: block;
         &--black {
-            color: $primaryTitleColor
+            color: $primaryTitleColor;
+            transition: color 250ms ease-in-out;
+        }
+        &:hover>.header__logo--black,
+        &:focus>.header__logo--black {
+            color: $accentColor;
         }
         @media screen and (min-width: 1200px) {
             margin-right: 97px;

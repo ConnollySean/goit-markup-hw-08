@@ -37,6 +37,11 @@
         text-align: center;
         &--white {
             color: $secondaryTitleColor;
+            transition: color 250ms ease-in-out;
+        }
+        &:hover>.footer__logo--white,
+        &:focus>.footer__logo--white {
+            color: $accentColor;
         }
         @media screen and (min-width:1200px) {
             text-align: left;

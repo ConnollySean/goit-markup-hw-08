@@ -78,6 +78,10 @@ textarea {
 }
 .logo--blue {
   color: #2196F3;
+  transition: color 250ms ease-in-out;
+}
+.logo:hover > .logo--blue, .logo:focus > .logo--blue {
+  color: #014379;
 }
 
 @media screen and (min-width: 1200px) {
@@ -157,6 +161,10 @@ textarea {
 }
 .header__logo--black {
   color: #212121;
+  transition: color 250ms ease-in-out;
+}
+.header__logo:hover > .header__logo--black, .header__logo:focus > .header__logo--black {
+  color: #2196F3;
 }
 @media screen and (min-width: 1200px) {
   .header__logo {
@@ -463,6 +471,10 @@ textarea {
 }
 .footer__logo--white {
   color: #FFF;
+  transition: color 250ms ease-in-out;
+}
+.footer__logo:hover > .footer__logo--white, .footer__logo:focus > .footer__logo--white {
+  color: #2196F3;
 }
 @media screen and (min-width: 1200px) {
   .footer__logo {
